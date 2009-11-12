@@ -1430,16 +1430,19 @@ bool Mesh::refine_hex_2(Hex *parent, int refinement) {
 	for (int i = 0; i < 4; i++)
 		refined &= refine_quad_facet(parent, face_2[i], face_refts[i], parent->sons[0], parent->sons[1]);
 
+    /*
 	refined &= refine_quad_facet(parent, face_0[0], REFT_FACE_NONE, parent->sons[0]);
 	refined &= refine_quad_facet(parent, face_0[1], REFT_FACE_NONE, parent->sons[1]);
 
 	// add a facet between two new elements
 	add_quad_facet(Facet::INNER, parent->sons[0], face_0[1], parent->sons[1], face_0[0]);
+    */
 
 	return refined;
 }
 
 bool Mesh::refine_hex_4(Hex *parent, int refinement) {
+    /*
 	_F_
 	bool refined = true;
 
@@ -1575,6 +1578,7 @@ bool Mesh::refine_hex_4(Hex *parent, int refinement) {
 	add_quad_facet(Facet::INNER, parent->sons[1], face_2[3], parent->sons[2], face_2[2]);
 
 	return refined;
+    */
 }
 
 bool Mesh::refine_hex_8(Hex *parent, int refinement) {
